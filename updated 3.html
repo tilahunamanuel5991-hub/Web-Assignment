@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amanuel Tilahun Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+}
+
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display:flex;
+justify-content:flex-end;
+padding:20px;
+transition:0.3s;
+z-index:1000;
+}
+
+nav.scrolled{
+background:rgba(0,0,0,0.8);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:orange;
+}
+
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+background-size:cover;
+overflow:hidden;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+
+.slide-text{
+width:60%;
+overflow:hidden;
+white-space:nowrap;
+margin-top:10px;
+}
+
+.slide-text span{
+display:inline-block;
+animation:slideText 8s linear infinite;
+}
+
+@keyframes slideText{
+0%{ transform:translateX(100%); }
+100%{ transform:translateX(-100%); }
+}
+
+.btn{
+margin-top:20px;
+padding:10px 20px;
+background:red;
+color:white;
+text-decoration:none;
+border-radius:5px;
+display:inline-block;
+}
+
+.btn:hover{
+background:orange;
+}
+
+.btn i{
+margin-right:8px;
+}
+
+/* SECTIONS */
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+.about{
+background:skyblue;
+}
+
+.about-container{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.about-text{
+max-width:400px;
+text-align:left;
+}
+
+.about-img img{
+width:250px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+.services{
+background:#222;
+color:white;
+}
+
+.service-box{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.service{
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+width:250px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.service:hover{
+transform:scale(1.05);
+}
+
+.skills{
+background:orange;
+}
+
+.skills p{
+max-width:600px;
+margin:0 auto;
+}
+
+.bar{
+width:80%;
+background:#ddd;
+margin:10px auto;
+}
+
+.bar div{
+height:20px;
+background:red;
+width:0;
+transition:1s;
+}
+
+.skills .btn{
+display:block;
+margin:20px 0 20px 10%;
+text-align:left;
+}
+
+.contact{
+background:aqua;
+}
+
+.contact-container{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+}
+
+.contact form{
+display:flex;
+flex-direction:column;
+width:300px;
+}
+
+.contact input,
+.contact textarea{
+margin:5px 0;
+padding:10px;
+}
+
+.send{
+background:red;
+color:white;
+border:none;
+padding:10px;
+cursor:pointer;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+margin-top:15px;
+}
+
+.social-icons a{
+color:white;
+font-size:20px;
+margin:0 10px;
+transition:0.3s;
+}
+
+.social-icons a:hover .fa-facebook-f{
+color:#1877f2;
+}
+
+.social-icons a:hover .fa-youtube{
+color:#ff0000;
+}
+
+.social-icons a:hover .fa-twitter{
+color:#1da1f2;
+}
+
+/* FOOTER */
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+footer span{
+color:red;
+}
+
+.top{
+position:absolute;
+right:20px;
+bottom:20px;
+background:red;
+color:white;
+padding:5px 10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav id="navbar">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero" id="home">
+<h1>Hello, I am Amanuel Tilahun</h1>
+
+<div class="slide-text">
+<span>Hello 👋 I am Amanuel Tilahun | Grade 11 Web Design Student | Welcome to my Portfolio 🚀</span>
+</div>
+
+<a href="https://t.me/yourusername" class="btn" target="_blank">
+<i class="fab fa-telegram-plane"></i> Contact on Telegram
+</a>
+</section>
+
+
+<section class="about" id="about">
+<h2>About Me</h2>
+
+<div class="about-container">
+<div class="about-img">
+<img src="IMG_20250320_203826_717.jpg" alt="Profile">
+</div>
+
+<div class="about-text">
+<p>Hello, my name is Amanuel. I am a passionate web design student who loves creating modern and user-friendly websites.</p>
+</div>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+<h2>My Services</h2>
+
+<div class="service-box">
+<div class="service">
+<h3>💻 Web Design</h3>
+<p>I create attractive, responsive, and user-friendly websites.</p>
+</div>
+
+<div class="service">
+<h3>🎹 Musician</h3>
+<p>I enjoy playing music and expressing creativity through sound.</p>
+</div>
+
+<div class="service">
+<h3>🎒 Student</h3>
+<p>I am a dedicated Grade 11 student focused on improving my skills every day.</p>
+</div>
+</div>
+</section>
+
+<section class="skills" id="skills">
+<h2>My Creative Skills</h2>
+
+<p>I am a creative and passionate individual with different skills that help me express myself in unique ways.
+As a web designer, I enjoy building modern and user-friendly websites.
+As a musician, I use sound and rhythm to share my feelings and creativity.
+As a student, I am always learning, growing, and improving my knowledge every day.</p>
+
+<button class="btn" onclick="location.href='#home'">Read More</button>
+
+<div class="bar"><div id="html"></div></div>
+<p>HTML 90%</p>
+
+<div class="bar"><div id="css"></div></div>
+<p>CSS 85%</p>
+
+<div class="bar"><div id="php"></div></div>
+<p>PHP 40%</p>
+
+<div class="bar"><div id="js"></div></div>
+<p>JavaScript 66%</p>
+
+</section>
+
+
+<section class="contact" id="contact">
+<h2>Contact Me</h2>
+
+<div class="contact-container">
+
+<form id="form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<input type="text" placeholder="Subject">
+<textarea placeholder="Message"></textarea>
+<button class="send">Send Message</button>
+</form>
+
+<div>
+<h3>Feel free to contact me!</h3>
+<p>👤 Ethiopia, Addis Ababa</p>
+<p>📞 +251(🇪🇹)9 ** ** ** **</p>
+<p>✉ contact@amanutile@gmail.com</p>
+
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 <span>Amanuel Tilahun</span>. All rights reserved.</p>
+<div class="top" onclick="location.href='#home'">^</div>
+</footer>
+
+<script>
+window.addEventListener("scroll",function(){
+document.getElementById("navbar").classList.toggle("scrolled",window.scrollY>50)
+});
+
+let animated=false;
+
+window.addEventListener("scroll",function(){
+let pos=document.getElementById("skills").offsetTop;
+
+if(window.scrollY>=pos-300 && !animated){
+document.getElementById("html").style.width="90%";
+document.getElementById("css").style.width="85%";
+document.getElementById("php").style.width="40%";
+document.getElementById("js").style.width="66%";
+animated=true;
+}
+});
+
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+alert("Message sent successfully!");
+});
+</script>
+
+</body>
+</html>
